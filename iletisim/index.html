@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06142f">
+  <title>Gökhan Eroğlu | İletişim Kartı</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+      font-family:Arial,Helvetica,sans-serif;color:#fff;overflow:hidden;
+      background:
+        radial-gradient(circle at 15% 20%,rgba(42,112,255,.16) 0 2px,transparent 3px),
+        radial-gradient(circle at 80% 15%,rgba(255,255,255,.65) 0 1px,transparent 2px),
+        radial-gradient(circle at 70% 75%,rgba(64,145,255,.35) 0 1px,transparent 2px),
+        radial-gradient(circle at 25% 80%,rgba(255,255,255,.5) 0 1px,transparent 2px),
+        radial-gradient(ellipse at 70% 40%,rgba(17,75,170,.24),transparent 45%),
+        linear-gradient(135deg,#01040b 0%,#030b1b 48%,#01040b 100%);
+      background-size:260px 220px,320px 280px,410px 330px,360px 300px,100% 100%,100% 100%;
+      position:relative;
+    }
+    body:before{content:"";position:absolute;inset:-30%;background:repeating-radial-gradient(ellipse at center,transparent 0 7px,rgba(86,154,255,.025) 8px 9px);transform:rotate(-18deg);pointer-events:none}
+    .stars{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff 1px,transparent 1.5px);background-size:83px 97px;opacity:.22}
+    .card{
+      width:min(420px,100%);position:relative;padding:34px 28px 25px;border-radius:28px;
+      background:linear-gradient(145deg,rgba(3,10,24,.96),rgba(1,5,13,.97));
+      border:1px solid rgba(116,177,255,.22);box-shadow:0 24px 80px rgba(0,0,0,.68),0 0 45px rgba(20,91,190,.12);
+      backdrop-filter:blur(16px);overflow:hidden;
+    }
+    .card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(64,142,255,.055),transparent 35%,rgba(0,184,255,.025));pointer-events:none}
+    .logo-wrap{width:92px;height:92px;margin:0 auto 18px;border-radius:50%;padding:4px;background:linear-gradient(135deg,#72b9ff,#0d55bd);box-shadow:0 0 28px rgba(46,132,255,.35)}
+    .logo-wrap img{width:100%;height:100%;object-fit:cover;border-radius:50%;background:#07152f}
+    .identity{text-align:center;position:relative}
+    h1{font-size:31px;letter-spacing:.2px;margin-bottom:7px}
+    .identity p{font-size:15px;color:#bcd6ff;margin-bottom:8px}
+    .identity span{display:inline-block;font-size:13px;color:#ff7a18;background:rgba(255,122,24,.07);border:1px solid rgba(255,122,24,.38);padding:7px 12px;border-radius:999px;font-weight:800;letter-spacing:.2px}
+    .contact-list{margin-top:26px;display:grid;gap:11px;position:relative}
+    .contact-item{display:flex;align-items:center;gap:13px;text-decoration:none;color:#fff;padding:13px 14px;border-radius:16px;background:rgba(255,255,255,.055);border:1px solid rgba(147,190,255,.12);transition:.2s ease}
+    .contact-item:hover{transform:translateY(-2px);background:rgba(72,145,255,.13);border-color:rgba(128,190,255,.28)}
+    .icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(54,129,239,.18);color:#86c1ff;font-size:18px;flex:none}
+    .contact-text{min-width:0;display:flex;flex-direction:column;gap:3px}
+    .contact-text small{font-size:11px;color:#91add4;text-transform:uppercase;letter-spacing:1px}
+    .contact-text strong{font-size:14px;font-weight:750;word-break:break-word}
+    .arrow{margin-left:auto;color:#6f91bc;font-size:12px}
+    .apply-button{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:20px;border:1px solid rgba(255,122,24,.55);border-radius:15px;padding:14px 16px;background:linear-gradient(135deg,rgba(255,122,24,.13),rgba(8,25,52,.88));color:#fff;font-size:14px;font-weight:800;text-decoration:none;letter-spacing:.4px;box-shadow:0 10px 25px rgba(0,0,0,.22);transition:.2s}
+    .apply-button i{color:#ff7a18}
+    .apply-button:hover{transform:translateY(-2px);background:linear-gradient(135deg,rgba(255,122,24,.2),rgba(8,25,52,.92));border-color:rgba(255,122,24,.78)}
+    .save-button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    footer{text-align:center;margin-top:22px;font-size:13px;letter-spacing:2.2px;color:#87a9d7;font-weight:800}
+    footer span{display:block;margin-top:7px;color:#d7e7ff;letter-spacing:1.8px;font-size:12px}
+    @media(max-width:420px){body{padding:14px}.card{padding:28px 20px 22px}h1{font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <main class="card">
+    <div class="logo-wrap"><img src="anka-logo.jpg" alt="ANKA Takımı"></div>
+    <section class="identity">
+      <h1>Gökhan Eroğlu</h1>
+      <p>Elektrik-Elektronik Mühendisi</p>
+      <span>ANKA Takım Kaptanı</span>
+    </section>
+
+    <section class="contact-list">
+      <a class="contact-item" href="tel:+905079390188">
+        <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="contact-text"><small>Telefon</small><strong>+90 507 939 01 88</strong></div>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+      <a class="contact-item" href="mailto:gokhanerogluanka@gmail.com">
+        <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-text"><small>E-posta</small><strong>gokhanerogluanka@gmail.com</strong></div>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/gokhaneroglu01/" target="_blank" rel="noopener noreferrer">
+        <div class="icon"><i class="fa-brands fa-linkedin-in"></i></div>
+        <div class="contact-text"><small>LinkedIn</small><strong>linkedin.com/in/gokhaneroglu01</strong></div>
+        <i class="fa-solid fa-chevron-right arrow"></i>
+      </a>
+    </section>
+
+    <a class="apply-button" href="https://forms.gle/gKn6ogVqhmZeRBoE9" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-file-lines"></i> BAŞVURU FORMU <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <footer>ANKA <span>#yenidendogus</span></footer>
+  </main>
+
+
+</body>
+</html>
